@@ -1,0 +1,32 @@
+<div class="list-container">
+  <dx-list height="100%" [dataSource]="employees" [grouped]="true" [collapsibleGroups]="true">
+    <div *dxTemplate="let item of 'group'">
+      <div>Assigned: {{item.key}}</div>
+    </div>
+  </dx-list>
+</div>
+
+
+<hr>
+<p>addsasadsa</p>
+<dx-list  [dataSource]="listData" itemTemplate="listItem">
+  <div *dxTemplate="let itemData of 'listItem'; let itemIndex = index">
+    {{itemIndex}} - {{itemData.itemProperty}}
+  </div>
+</dx-list>
+
+
+<br><br><br><br>
+<hr>
+<dx-list [items]="listData" itemTemplate="listItem">
+  <div *dxTemplate="let itemData of 'listItem'; let itemIndex = index">
+      <ng-template 
+          [ngTemplateOutlet]="customItemTemplate" 
+          [ngTemplateOutletContext]="{ itemData: itemData, itemIndex: itemIndex }">
+      </ng-template>
+  </div>
+</dx-list>
+
+<ng-template #customItemTemplate let-data="itemData" let-index="itemIndex">
+  {{index}} - {{data.itemProperty}}
+</ng-template>

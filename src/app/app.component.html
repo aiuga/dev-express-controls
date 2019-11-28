@@ -1,0 +1,25 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" [routerLink]="['/three-map']">Three Map</a>
+        <a class="nav-item nav-link" [routerLink]="['/data-grid']">Data Grid</a>
+        <a class="nav-item nav-link"[routerLink]="['/data-grid-api']">Data Grid API</a>
+        <a class="nav-item nav-link"[routerLink]="['/charts']">Charts</a>
+        <a class="nav-item nav-link"[routerLink]="['/others']">Others</a>
+        <a class="nav-item nav-link"[routerLink]="['/scroller']">Scroller</a>
+        <a class="nav-item nav-link"[routerLink]="['/groupList']">Group List</a>
+        <a class="nav-item nav-link"[routerLink]="['/validation']">Validation</a>
+        <a class="nav-item nav-link"[routerLink]="['/action-sheet']">Action Sheet</a>
+        <a class="nav-item nav-link"[routerLink]="['/bar-gauge']">Bar Gauge</a>
+        <a class="nav-item nav-link"[routerLink]="['/bullet']">Bullet</a>
+      </div>
+    </div>
+  </nav>
+
+<router-outlet></router-outlet>
